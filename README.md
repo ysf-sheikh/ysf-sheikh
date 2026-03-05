@@ -1,5 +1,5 @@
 # 💫 About Me:
-🔭 I’m currently working on Home Lab: Active Directory Security Monitoring & Attack Detection<br>🤝 I’m looking for help in Understanding how SOC teams investigate AD-based attacks<br>🌱 I’m currently learning Python & scripting for information security & PowerShell for system management and automation<br>💬 Ask me about building home labs for cybersecurity and Active Directory fundamentals<br>⚡ Fun fact I prefer learning by breaking things in a lab and fixing them, rather than just watching tutorials.
+🔭 I’m currently working on a Real-Time Transaction Fraud Detection System<br>🤝 I’m looking for help in Understanding how SOC teams investigate AD-based attacks<br>🌱 I’m currently learning Python & scripting for information security & PowerShell for system management and automation<br>⚡ Fun fact: I prefer learning by breaking things in a lab and fixing them, rather than just watching tutorials.
 
 
 ## 🌐 Socials:
