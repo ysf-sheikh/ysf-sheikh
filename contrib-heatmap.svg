@@ -1,0 +1,5337 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+        width="951"
+        height="259"
+        viewBox="0 0 951 259">
+        
+        <style>
+            .cell {
+                opacity: 0;
+                animation: reveal 0.45s ease-out forwards;
+            }
+
+            @keyframes reveal {
+                from {
+                    opacity: 0;
+                    transform: translateY(-8px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .title {
+                font-family: -apple-system, BlinkMacSystemFont,
+                "Segoe UI", sans-serif;
+                font-size: 15px;
+                font-weight: 600;
+                fill: #f0f6fc;
+            }
+
+            .text {
+                font-family: -apple-system, BlinkMacSystemFont,
+                "Segoe UI", sans-serif;
+                font-size: 11px;
+                fill: #8b949e;
+            }
+
+            .stat {
+                font-family: -apple-system, BlinkMacSystemFont,
+                "Segoe UI", sans-serif;
+                font-size: 12px;
+                fill: #c9d1d9;
+            }
+        </style>
+
+        <rect width="100%" height="100%"
+              rx="12"
+              fill="#0d1117"
+              stroke="#30363d"/>
+
+        <text
+            x="40"
+            y="24"
+            class="title">
+            github.com/ysf-sheikh
+        </text>
+        
+            <rect
+                class="cell"
+                x="40"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.000s">
+                <title>
+                    2025-09-21: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="40"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.020s">
+                <title>
+                    2025-09-22: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="40"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.040s">
+                <title>
+                    2025-09-23: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="40"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.060s">
+                <title>
+                    2025-09-24: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="40"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.080s">
+                <title>
+                    2025-09-25: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="40"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.100s">
+                <title>
+                    2025-09-26: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="40"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.120s">
+                <title>
+                    2025-09-27: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="57"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.025s">
+                <title>
+                    2025-09-28: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="57"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.045s">
+                <title>
+                    2025-09-29: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="57"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.065s">
+                <title>
+                    2025-09-30: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="57"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.085s">
+                <title>
+                    2025-10-01: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="57"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.105s">
+                <title>
+                    2025-10-02: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="57"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.125s">
+                <title>
+                    2025-10-03: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="57"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.145s">
+                <title>
+                    2025-10-04: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="74"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.050s">
+                <title>
+                    2025-10-05: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="74"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.070s">
+                <title>
+                    2025-10-06: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="74"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.090s">
+                <title>
+                    2025-10-07: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="74"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.110s">
+                <title>
+                    2025-10-08: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="74"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.130s">
+                <title>
+                    2025-10-09: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="74"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.150s">
+                <title>
+                    2025-10-10: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="74"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.170s">
+                <title>
+                    2025-10-11: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="91"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.075s">
+                <title>
+                    2025-10-12: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="91"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.095s">
+                <title>
+                    2025-10-13: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="91"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.115s">
+                <title>
+                    2025-10-14: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="91"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.135s">
+                <title>
+                    2025-10-15: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="91"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.155s">
+                <title>
+                    2025-10-16: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="91"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.175s">
+                <title>
+                    2025-10-17: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="91"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.195s">
+                <title>
+                    2025-10-18: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="108"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.100s">
+                <title>
+                    2025-10-19: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="108"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.120s">
+                <title>
+                    2025-10-20: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="108"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.140s">
+                <title>
+                    2025-10-21: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="108"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.160s">
+                <title>
+                    2025-10-22: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="108"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.180s">
+                <title>
+                    2025-10-23: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="108"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.200s">
+                <title>
+                    2025-10-24: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="108"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.220s">
+                <title>
+                    2025-10-25: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="125"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.125s">
+                <title>
+                    2025-10-26: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="125"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.145s">
+                <title>
+                    2025-10-27: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="125"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.165s">
+                <title>
+                    2025-10-28: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="125"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.185s">
+                <title>
+                    2025-10-29: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="125"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.205s">
+                <title>
+                    2025-10-30: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="125"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.225s">
+                <title>
+                    2025-10-31: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="125"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.245s">
+                <title>
+                    2025-11-01: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="142"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.150s">
+                <title>
+                    2025-11-02: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="142"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.170s">
+                <title>
+                    2025-11-03: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="142"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.190s">
+                <title>
+                    2025-11-04: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="142"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.210s">
+                <title>
+                    2025-11-05: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="142"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.230s">
+                <title>
+                    2025-11-06: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="142"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.250s">
+                <title>
+                    2025-11-07: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="142"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.270s">
+                <title>
+                    2025-11-08: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="159"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.175s">
+                <title>
+                    2025-11-09: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="159"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.195s">
+                <title>
+                    2025-11-10: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="159"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.215s">
+                <title>
+                    2025-11-11: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="159"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.235s">
+                <title>
+                    2025-11-12: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="159"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.255s">
+                <title>
+                    2025-11-13: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="159"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.275s">
+                <title>
+                    2025-11-14: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="159"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.295s">
+                <title>
+                    2025-11-15: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="176"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.200s">
+                <title>
+                    2025-11-16: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="176"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.220s">
+                <title>
+                    2025-11-17: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="176"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.240s">
+                <title>
+                    2025-11-18: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="176"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.260s">
+                <title>
+                    2025-11-19: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="176"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.280s">
+                <title>
+                    2025-11-20: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="176"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.300s">
+                <title>
+                    2025-11-21: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="176"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.320s">
+                <title>
+                    2025-11-22: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="193"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.225s">
+                <title>
+                    2025-11-23: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="193"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.245s">
+                <title>
+                    2025-11-24: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="193"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.265s">
+                <title>
+                    2025-11-25: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="193"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.285s">
+                <title>
+                    2025-11-26: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="193"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.305s">
+                <title>
+                    2025-11-27: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="193"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.325s">
+                <title>
+                    2025-11-28: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="193"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.345s">
+                <title>
+                    2025-11-29: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="210"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.250s">
+                <title>
+                    2025-11-30: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="210"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.270s">
+                <title>
+                    2025-12-01: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="210"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.290s">
+                <title>
+                    2025-12-02: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="210"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.310s">
+                <title>
+                    2025-12-03: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="210"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.330s">
+                <title>
+                    2025-12-04: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="210"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.350s">
+                <title>
+                    2025-12-05: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="210"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.370s">
+                <title>
+                    2025-12-06: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="227"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.275s">
+                <title>
+                    2025-12-07: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="227"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.295s">
+                <title>
+                    2025-12-08: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="227"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.315s">
+                <title>
+                    2025-12-09: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="227"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.335s">
+                <title>
+                    2025-12-10: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="227"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.355s">
+                <title>
+                    2025-12-11: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="227"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.375s">
+                <title>
+                    2025-12-12: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="227"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.395s">
+                <title>
+                    2025-12-13: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="244"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.300s">
+                <title>
+                    2025-12-14: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="244"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.320s">
+                <title>
+                    2025-12-15: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="244"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.340s">
+                <title>
+                    2025-12-16: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="244"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.360s">
+                <title>
+                    2025-12-17: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="244"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.380s">
+                <title>
+                    2025-12-18: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="244"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.400s">
+                <title>
+                    2025-12-19: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="244"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.420s">
+                <title>
+                    2025-12-20: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="261"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.325s">
+                <title>
+                    2025-12-21: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="261"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.345s">
+                <title>
+                    2025-12-22: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="261"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.365s">
+                <title>
+                    2025-12-23: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="261"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.385s">
+                <title>
+                    2025-12-24: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="261"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.405s">
+                <title>
+                    2025-12-25: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="261"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.425s">
+                <title>
+                    2025-12-26: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="261"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.445s">
+                <title>
+                    2025-12-27: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="278"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.350s">
+                <title>
+                    2025-12-28: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="278"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.370s">
+                <title>
+                    2025-12-29: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="278"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.390s">
+                <title>
+                    2025-12-30: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="278"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.410s">
+                <title>
+                    2025-12-31: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="278"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.430s">
+                <title>
+                    2026-01-01: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="278"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 0.450s">
+                <title>
+                    2026-01-02: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="278"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.470s">
+                <title>
+                    2026-01-03: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="295"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 0.375s">
+                <title>
+                    2026-01-04: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="295"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.395s">
+                <title>
+                    2026-01-05: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="295"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.415s">
+                <title>
+                    2026-01-06: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="295"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.435s">
+                <title>
+                    2026-01-07: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="295"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.455s">
+                <title>
+                    2026-01-08: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="295"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.475s">
+                <title>
+                    2026-01-09: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="295"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.495s">
+                <title>
+                    2026-01-10: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="312"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.400s">
+                <title>
+                    2026-01-11: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="312"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.420s">
+                <title>
+                    2026-01-12: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="312"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.440s">
+                <title>
+                    2026-01-13: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="312"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.460s">
+                <title>
+                    2026-01-14: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="312"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.480s">
+                <title>
+                    2026-01-15: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="312"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.500s">
+                <title>
+                    2026-01-16: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="312"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.520s">
+                <title>
+                    2026-01-17: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="329"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.425s">
+                <title>
+                    2026-01-18: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="329"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.445s">
+                <title>
+                    2026-01-19: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="329"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.465s">
+                <title>
+                    2026-01-20: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="329"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.485s">
+                <title>
+                    2026-01-21: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="329"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.505s">
+                <title>
+                    2026-01-22: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="329"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.525s">
+                <title>
+                    2026-01-23: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="329"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.545s">
+                <title>
+                    2026-01-24: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="346"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.450s">
+                <title>
+                    2026-01-25: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="346"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.470s">
+                <title>
+                    2026-01-26: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="346"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.490s">
+                <title>
+                    2026-01-27: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="346"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.510s">
+                <title>
+                    2026-01-28: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="346"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.530s">
+                <title>
+                    2026-01-29: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="346"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.550s">
+                <title>
+                    2026-01-30: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="346"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.570s">
+                <title>
+                    2026-01-31: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="363"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.475s">
+                <title>
+                    2026-02-01: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="363"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.495s">
+                <title>
+                    2026-02-02: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="363"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.515s">
+                <title>
+                    2026-02-03: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="363"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.535s">
+                <title>
+                    2026-02-04: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="363"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.555s">
+                <title>
+                    2026-02-05: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="363"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.575s">
+                <title>
+                    2026-02-06: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="363"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.595s">
+                <title>
+                    2026-02-07: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="380"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.500s">
+                <title>
+                    2026-02-08: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="380"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.520s">
+                <title>
+                    2026-02-09: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="380"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.540s">
+                <title>
+                    2026-02-10: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="380"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.560s">
+                <title>
+                    2026-02-11: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="380"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.580s">
+                <title>
+                    2026-02-12: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="380"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.600s">
+                <title>
+                    2026-02-13: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="380"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.620s">
+                <title>
+                    2026-02-14: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="397"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 0.525s">
+                <title>
+                    2026-02-15: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="397"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.545s">
+                <title>
+                    2026-02-16: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="397"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.565s">
+                <title>
+                    2026-02-17: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="397"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.585s">
+                <title>
+                    2026-02-18: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="397"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.605s">
+                <title>
+                    2026-02-19: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="397"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.625s">
+                <title>
+                    2026-02-20: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="397"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.645s">
+                <title>
+                    2026-02-21: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="414"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.550s">
+                <title>
+                    2026-02-22: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="414"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.570s">
+                <title>
+                    2026-02-23: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="414"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.590s">
+                <title>
+                    2026-02-24: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="414"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.610s">
+                <title>
+                    2026-02-25: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="414"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.630s">
+                <title>
+                    2026-02-26: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="414"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.650s">
+                <title>
+                    2026-02-27: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="414"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.670s">
+                <title>
+                    2026-02-28: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="431"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.575s">
+                <title>
+                    2026-03-01: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="431"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.595s">
+                <title>
+                    2026-03-02: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="431"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.615s">
+                <title>
+                    2026-03-03: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="431"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.635s">
+                <title>
+                    2026-03-04: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="431"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 0.655s">
+                <title>
+                    2026-03-05: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="431"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.675s">
+                <title>
+                    2026-03-06: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="431"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.695s">
+                <title>
+                    2026-03-07: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="448"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.600s">
+                <title>
+                    2026-03-08: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="448"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.620s">
+                <title>
+                    2026-03-09: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="448"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 0.640s">
+                <title>
+                    2026-03-10: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="448"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.660s">
+                <title>
+                    2026-03-11: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="448"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.680s">
+                <title>
+                    2026-03-12: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="448"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.700s">
+                <title>
+                    2026-03-13: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="448"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.720s">
+                <title>
+                    2026-03-14: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="465"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.625s">
+                <title>
+                    2026-03-15: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="465"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.645s">
+                <title>
+                    2026-03-16: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="465"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.665s">
+                <title>
+                    2026-03-17: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="465"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.685s">
+                <title>
+                    2026-03-18: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="465"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.705s">
+                <title>
+                    2026-03-19: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="465"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.725s">
+                <title>
+                    2026-03-20: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="465"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.745s">
+                <title>
+                    2026-03-21: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="482"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.650s">
+                <title>
+                    2026-03-22: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="482"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.670s">
+                <title>
+                    2026-03-23: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="482"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.690s">
+                <title>
+                    2026-03-24: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="482"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.710s">
+                <title>
+                    2026-03-25: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="482"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.730s">
+                <title>
+                    2026-03-26: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="482"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.750s">
+                <title>
+                    2026-03-27: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="482"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.770s">
+                <title>
+                    2026-03-28: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="499"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.675s">
+                <title>
+                    2026-03-29: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="499"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.695s">
+                <title>
+                    2026-03-30: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="499"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.715s">
+                <title>
+                    2026-03-31: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="499"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.735s">
+                <title>
+                    2026-04-01: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="499"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.755s">
+                <title>
+                    2026-04-02: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="499"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.775s">
+                <title>
+                    2026-04-03: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="499"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.795s">
+                <title>
+                    2026-04-04: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="516"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.700s">
+                <title>
+                    2026-04-05: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="516"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.720s">
+                <title>
+                    2026-04-06: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="516"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.740s">
+                <title>
+                    2026-04-07: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="516"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.760s">
+                <title>
+                    2026-04-08: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="516"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.780s">
+                <title>
+                    2026-04-09: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="516"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.800s">
+                <title>
+                    2026-04-10: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="516"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.820s">
+                <title>
+                    2026-04-11: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="533"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 0.725s">
+                <title>
+                    2026-04-12: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="533"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.745s">
+                <title>
+                    2026-04-13: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="533"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.765s">
+                <title>
+                    2026-04-14: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="533"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.785s">
+                <title>
+                    2026-04-15: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="533"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.805s">
+                <title>
+                    2026-04-16: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="533"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.825s">
+                <title>
+                    2026-04-17: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="533"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.845s">
+                <title>
+                    2026-04-18: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="550"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.750s">
+                <title>
+                    2026-04-19: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="550"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.770s">
+                <title>
+                    2026-04-20: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="550"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.790s">
+                <title>
+                    2026-04-21: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="550"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.810s">
+                <title>
+                    2026-04-22: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="550"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.830s">
+                <title>
+                    2026-04-23: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="550"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.850s">
+                <title>
+                    2026-04-24: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="550"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.870s">
+                <title>
+                    2026-04-25: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="567"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.775s">
+                <title>
+                    2026-04-26: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="567"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.795s">
+                <title>
+                    2026-04-27: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="567"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.815s">
+                <title>
+                    2026-04-28: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="567"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.835s">
+                <title>
+                    2026-04-29: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="567"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.855s">
+                <title>
+                    2026-04-30: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="567"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.875s">
+                <title>
+                    2026-05-01: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="567"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.895s">
+                <title>
+                    2026-05-02: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="584"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.800s">
+                <title>
+                    2026-05-03: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="584"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.820s">
+                <title>
+                    2026-05-04: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="584"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.840s">
+                <title>
+                    2026-05-05: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="584"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.860s">
+                <title>
+                    2026-05-06: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="584"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.880s">
+                <title>
+                    2026-05-07: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="584"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.900s">
+                <title>
+                    2026-05-08: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="584"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.920s">
+                <title>
+                    2026-05-09: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="601"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.825s">
+                <title>
+                    2026-05-10: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="601"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.845s">
+                <title>
+                    2026-05-11: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="601"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.865s">
+                <title>
+                    2026-05-12: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="601"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.885s">
+                <title>
+                    2026-05-13: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="601"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.905s">
+                <title>
+                    2026-05-14: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="601"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.925s">
+                <title>
+                    2026-05-15: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="601"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.945s">
+                <title>
+                    2026-05-16: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="618"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.850s">
+                <title>
+                    2026-05-17: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="618"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.870s">
+                <title>
+                    2026-05-18: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="618"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.890s">
+                <title>
+                    2026-05-19: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="618"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.910s">
+                <title>
+                    2026-05-20: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="618"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.930s">
+                <title>
+                    2026-05-21: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="618"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.950s">
+                <title>
+                    2026-05-22: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="618"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.970s">
+                <title>
+                    2026-05-23: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="635"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.875s">
+                <title>
+                    2026-05-24: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="635"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.895s">
+                <title>
+                    2026-05-25: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="635"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.915s">
+                <title>
+                    2026-05-26: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="635"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.935s">
+                <title>
+                    2026-05-27: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="635"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.955s">
+                <title>
+                    2026-05-28: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="635"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.975s">
+                <title>
+                    2026-05-29: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="635"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#39d353"
+                style="animation-delay: 0.995s">
+                <title>
+                    2026-05-30: contribution level 4
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="652"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 0.900s">
+                <title>
+                    2026-05-31: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="652"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.920s">
+                <title>
+                    2026-06-01: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="652"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.940s">
+                <title>
+                    2026-06-02: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="652"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.960s">
+                <title>
+                    2026-06-03: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="652"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.980s">
+                <title>
+                    2026-06-04: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="652"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.000s">
+                <title>
+                    2026-06-05: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="652"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.020s">
+                <title>
+                    2026-06-06: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="669"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.925s">
+                <title>
+                    2026-06-07: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="669"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.945s">
+                <title>
+                    2026-06-08: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="669"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.965s">
+                <title>
+                    2026-06-09: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="669"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.985s">
+                <title>
+                    2026-06-10: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="669"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.005s">
+                <title>
+                    2026-06-11: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="669"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.025s">
+                <title>
+                    2026-06-12: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="669"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.045s">
+                <title>
+                    2026-06-13: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="686"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.950s">
+                <title>
+                    2026-06-14: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="686"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.970s">
+                <title>
+                    2026-06-15: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="686"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.990s">
+                <title>
+                    2026-06-16: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="686"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.010s">
+                <title>
+                    2026-06-17: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="686"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.030s">
+                <title>
+                    2026-06-18: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="686"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.050s">
+                <title>
+                    2026-06-19: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="686"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.070s">
+                <title>
+                    2026-06-20: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="703"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.975s">
+                <title>
+                    2026-06-21: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="703"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 0.995s">
+                <title>
+                    2026-06-22: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="703"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.015s">
+                <title>
+                    2026-06-23: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="703"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.035s">
+                <title>
+                    2026-06-24: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="703"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.055s">
+                <title>
+                    2026-06-25: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="703"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.075s">
+                <title>
+                    2026-06-26: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="703"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.095s">
+                <title>
+                    2026-06-27: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="720"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.000s">
+                <title>
+                    2026-06-28: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="720"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.020s">
+                <title>
+                    2026-06-29: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="720"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.040s">
+                <title>
+                    2026-06-30: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="720"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.060s">
+                <title>
+                    2026-07-01: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="720"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.080s">
+                <title>
+                    2026-07-02: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="720"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.100s">
+                <title>
+                    2026-07-03: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="720"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.120s">
+                <title>
+                    2026-07-04: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="737"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.025s">
+                <title>
+                    2026-07-05: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="737"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.045s">
+                <title>
+                    2026-07-06: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="737"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.065s">
+                <title>
+                    2026-07-07: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="737"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.085s">
+                <title>
+                    2026-07-08: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="737"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.105s">
+                <title>
+                    2026-07-09: contribution level 0
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="737"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.125s">
+                <title>
+                    2026-07-10: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="737"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.145s">
+                <title>
+                    2026-07-11: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="754"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.050s">
+                <title>
+                    2026-07-12: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="754"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.070s">
+                <title>
+                    2026-07-13: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="754"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.090s">
+                <title>
+                    2026-07-14: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="754"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.110s">
+                <title>
+                    2026-07-15: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="754"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.130s">
+                <title>
+                    2026-07-16: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="754"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.150s">
+                <title>
+                    2026-07-17: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="754"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#39d353"
+                style="animation-delay: 1.170s">
+                <title>
+                    2026-07-18: contribution level 4
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="771"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.075s">
+                <title>
+                    2026-07-19: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="771"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.095s">
+                <title>
+                    2026-07-20: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="771"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.115s">
+                <title>
+                    2026-07-21: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="771"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.135s">
+                <title>
+                    2026-07-22: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="771"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.155s">
+                <title>
+                    2026-07-23: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="771"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.175s">
+                <title>
+                    2026-07-24: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="771"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.195s">
+                <title>
+                    2026-07-25: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="788"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.100s">
+                <title>
+                    2026-07-26: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="788"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.120s">
+                <title>
+                    2026-07-27: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="788"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.140s">
+                <title>
+                    2026-07-28: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="788"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.160s">
+                <title>
+                    2026-07-29: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="788"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.180s">
+                <title>
+                    2026-07-30: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="788"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.200s">
+                <title>
+                    2026-07-31: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="788"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.220s">
+                <title>
+                    2026-08-01: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="805"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.125s">
+                <title>
+                    2026-08-02: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="805"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.145s">
+                <title>
+                    2026-08-03: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="805"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.165s">
+                <title>
+                    2026-08-04: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="805"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.185s">
+                <title>
+                    2026-08-05: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="805"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.205s">
+                <title>
+                    2026-08-06: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="805"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.225s">
+                <title>
+                    2026-08-07: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="805"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.245s">
+                <title>
+                    2026-08-08: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="822"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.150s">
+                <title>
+                    2026-08-09: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="822"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.170s">
+                <title>
+                    2026-08-10: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="822"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.190s">
+                <title>
+                    2026-08-11: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="822"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.210s">
+                <title>
+                    2026-08-12: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="822"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.230s">
+                <title>
+                    2026-08-13: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="822"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.250s">
+                <title>
+                    2026-08-14: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="822"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.270s">
+                <title>
+                    2026-08-15: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="839"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.175s">
+                <title>
+                    2026-08-16: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="839"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.195s">
+                <title>
+                    2026-08-17: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="839"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.215s">
+                <title>
+                    2026-08-18: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="839"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.235s">
+                <title>
+                    2026-08-19: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="839"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.255s">
+                <title>
+                    2026-08-20: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="839"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.275s">
+                <title>
+                    2026-08-21: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="839"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.295s">
+                <title>
+                    2026-08-22: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="856"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.200s">
+                <title>
+                    2026-08-23: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="856"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.220s">
+                <title>
+                    2026-08-24: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="856"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.240s">
+                <title>
+                    2026-08-25: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="856"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.260s">
+                <title>
+                    2026-08-26: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="856"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.280s">
+                <title>
+                    2026-08-27: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="856"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#0e4429"
+                style="animation-delay: 1.300s">
+                <title>
+                    2026-08-28: contribution level 1
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="856"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#39d353"
+                style="animation-delay: 1.320s">
+                <title>
+                    2026-08-29: contribution level 4
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="873"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#26a641"
+                style="animation-delay: 1.225s">
+                <title>
+                    2026-08-30: contribution level 3
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="873"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.245s">
+                <title>
+                    2026-08-31: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="873"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.265s">
+                <title>
+                    2026-09-01: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="873"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.285s">
+                <title>
+                    2026-09-02: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="873"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.305s">
+                <title>
+                    2026-09-03: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="873"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#26a641"
+                style="animation-delay: 1.325s">
+                <title>
+                    2026-09-04: contribution level 3
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="873"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.345s">
+                <title>
+                    2026-09-05: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="890"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.250s">
+                <title>
+                    2026-09-06: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="890"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.270s">
+                <title>
+                    2026-09-07: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="890"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#39d353"
+                style="animation-delay: 1.290s">
+                <title>
+                    2026-09-08: contribution level 4
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="890"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.310s">
+                <title>
+                    2026-09-09: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="890"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.330s">
+                <title>
+                    2026-09-10: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="890"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.350s">
+                <title>
+                    2026-09-11: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="890"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.370s">
+                <title>
+                    2026-09-12: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="907"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.275s">
+                <title>
+                    2026-09-13: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="907"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.295s">
+                <title>
+                    2026-09-14: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="907"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.315s">
+                <title>
+                    2026-09-15: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="907"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.335s">
+                <title>
+                    2026-09-16: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="907"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.355s">
+                <title>
+                    2026-09-17: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="907"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.375s">
+                <title>
+                    2026-09-18: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="907"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.395s">
+                <title>
+                    2026-09-19: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="924"
+                y="45"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.300s">
+                <title>
+                    2026-09-20: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="924"
+                y="62"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.320s">
+                <title>
+                    2026-09-21: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="924"
+                y="79"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.340s">
+                <title>
+                    2026-09-22: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="924"
+                y="96"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.360s">
+                <title>
+                    2026-09-23: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="924"
+                y="113"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.380s">
+                <title>
+                    2026-09-24: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="924"
+                y="130"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#006d32"
+                style="animation-delay: 1.400s">
+                <title>
+                    2026-09-25: contribution level 2
+                </title>
+            </rect>
+            
+            <rect
+                class="cell"
+                x="924"
+                y="147"
+                width="13"
+                height="13"
+                rx="3"
+                fill="#161b22"
+                style="animation-delay: 1.420s">
+                <title>
+                    2026-09-26: contribution level 0
+                </title>
+            </rect>
+            
+        <text
+            x="40"
+            y="194"
+            class="stat">
+            86 contributions
+        </text>
+
+        <text
+            x="200"
+            y="194"
+            class="text">
+            Current streak: 78 days
+        </text>
+
+        <text
+            x="370"
+            y="194"
+            class="text">
+            Longest streak: 78 days
+        </text>
+
+        <text
+            x="801"
+            y="224"
+            class="text">
+            Less
+        </text>
+        
+            <rect
+                x="841"
+                y="212"
+                width="12"
+                height="12"
+                rx="3"
+                fill="#161b22"/>
+            
+            <rect
+                x="858"
+                y="212"
+                width="12"
+                height="12"
+                rx="3"
+                fill="#0e4429"/>
+            
+            <rect
+                x="875"
+                y="212"
+                width="12"
+                height="12"
+                rx="3"
+                fill="#006d32"/>
+            
+            <rect
+                x="892"
+                y="212"
+                width="12"
+                height="12"
+                rx="3"
+                fill="#26a641"/>
+            
+            <rect
+                x="909"
+                y="212"
+                width="12"
+                height="12"
+                rx="3"
+                fill="#39d353"/>
+            
+            <rect
+                x="926"
+                y="212"
+                width="12"
+                height="12"
+                rx="3"
+                fill="#69f0a0"/>
+            
+        <text
+            x="943"
+            y="224"
+            text-anchor="end"
+            class="text">
+            More
+        </text>
+
+        </svg>
+        

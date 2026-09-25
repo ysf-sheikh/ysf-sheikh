@@ -1,9 +1,31 @@
-# 💫 About Me:
-Hi, I'm Yousuf<br>*Learning how systems break (and how to fix them)* <br>That’s pretty much my entire philosophy right now. I’m a Cybersecurity student at RIT (minoring in Finance), and most of my time is spent in the sweet spot between messing something up completely and figuring out the exact line of script that fixes it. <br>My pinned repos below cover the what, but here is a quick look at the how and the why.<br><br>What I’m Actually Doing:<br>*   **Breaking Networks:** Setting up labs, capturing packets, and writing Python utilities to dissect exactly how data moves (and where it gets vulnerable).<br>*   **Automating Everything:** If I have to do a task more than twice, I'll probably spend three hours writing a script to do it for me in three seconds. <br>*   **Bridging Tech & Finance:** Exploring the intersection of security and financial data pipelines because tracking anomalies in a transaction is just as fun as tracking them in a network log.<br><br>When I'm completely disconnected from a terminal and not actively trying to figure out why a virtual machine won't boot, I sketch and doodle real-life scenery. It’s the only time I'm dealing with perspective and lines instead of syntax and firewalls.
+<div align="center">
 
+<h3><code>yousuf@github ~ $ ./contributions.sh</code></h3>
 
-## 🌐 Socials:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/yousuf-sheikh-ysf) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:ya.sheikh@outlook.com) 
+<img src="./contrib-heatmap.svg" width="860" />
 
-# 💻 Tech Stack:
-![AssemblyScript](https://img.shields.io/badge/assembly%20script-%23000000.svg?style=plastic&logo=assemblyscript&logoColor=white) ![C](https://img.shields.io/badge/c-%2300599C.svg?style=plastic&logo=c&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=plastic&logo=openjdk&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=plastic&logo=javascript&logoColor=%23F7DF1E) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=plastic&logo=markdown&logoColor=white) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=plastic&logo=php&logoColor=white) ![PowerShell](https://img.shields.io/badge/PowerShell-%235391FE.svg?style=plastic&logo=powershell&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=plastic&logo=python&logoColor=ffdd54) ![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=plastic&logo=gnu-bash&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=plastic&logo=mysql&logoColor=white) ![Splunk](https://img.shields.io/badge/splunk-%23000000.svg?style=plastic&logo=splunk&logoColor=white)
+<br><br>
+
+<h3><code>yousuf@github ~ $ whoami</code></h3>
+
+</div>
+
+# Hi, I'm Yousuf
+
+**Learning how systems break, and trying to understand why.**
+
+I’m studying Cybersecurity at RIT with a minor in Finance, and lately I’ve become increasingly interested in the space where technology, data, and money meet.
+
+Most of what I build starts with a question rather than a technology. Why did this transaction look different? What caused this behavior? Is there actually a pattern here, or am I just seeing noise? I like taking messy, unpredictable data and pulling it apart until something that initially looked complicated starts to make sense.
+
+That has taken me through cybersecurity, network analysis, fraud detection, financial risk, machine learning, and data analytics. I learn best by building things, breaking them, staring at the results for longer than I probably should, and eventually figuring out what they were trying to tell me.
+
+I also tend to wander into questions that have nothing to do with code. I spend a fair amount of time reading and writing about human behavior, morality, and the strange ways people make sense of their own actions. It turns out I have roughly the same curiosity about people that I have about systems: **what’s happening underneath the surface, and why?**
+
+Most of the interesting things are hidden somewhere in that question.
+
+<div align="center">
+
+<sub>Built with Python, SVG, GitHub Actions, and an unreasonable amount of curiosity.</sub>
+
+</div>
