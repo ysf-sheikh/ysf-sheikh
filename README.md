@@ -12,7 +12,7 @@
 
 # Hi, I'm Yousuf
 
-**Learning how systems break, and trying to understand why.**
+**I'm learning how systems break, and trying to understand why.**
 
 I’m studying Cybersecurity at RIT with a minor in Finance, and lately I’ve become increasingly interested in the space where technology, data, and money meet.
 
