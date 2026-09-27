@@ -12,7 +12,7 @@
 
 # Hi, I'm Yousuf
 
-**I'm learning how systems break, and trying to understand why.**
+**Learning how systems break, and trying to understand why.**
 
 I’m studying Cybersecurity at RIT with a minor in Finance, and lately I’ve become increasingly interested in the space where technology, data, and money meet.
 
@@ -25,6 +25,24 @@ I also tend to wander into questions that have nothing to do with code. I spend 
 Most of the interesting things are hidden somewhere in that question.
 
 <div align="center">
+
+<h3><code>yousuf@github ~ $ techstack.sh</code></h3>
+
+<p>
+  <img src="https://img.shields.io/badge/AssemblyScript-%23000000.svg?style=plastic&logo=assemblyscript&logoColor=white" />
+  <img src="https://img.shields.io/badge/C-%2300599C.svg?style=plastic&logo=c&logoColor=white" />
+  <img src="https://img.shields.io/badge/Java-%23ED8B00.svg?style=plastic&logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-%23323330.svg?style=plastic&logo=javascript&logoColor=%23F7DF1E" />
+  <img src="https://img.shields.io/badge/Markdown-%23000000.svg?style=plastic&logo=markdown&logoColor=white" />
+  <img src="https://img.shields.io/badge/PHP-%23777BB4.svg?style=plastic&logo=php&logoColor=white" />
+  <img src="https://img.shields.io/badge/PowerShell-%235391FE.svg?style=plastic&logo=powershell&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3670A0?style=plastic&logo=python&logoColor=ffdd54" />
+  <img src="https://img.shields.io/badge/Bash%20Script-%23121011.svg?style=plastic&logo=gnu-bash&logoColor=white" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1.svg?style=plastic&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Splunk-%23000000.svg?style=plastic&logo=splunk&logoColor=white" />
+</p>
+
+<br>
 
 <sub>Built with Python, SVG, GitHub Actions, and an unreasonable amount of curiosity.</sub>
 
