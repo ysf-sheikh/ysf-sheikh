@@ -5158,10 +5158,10 @@
                 width="13"
                 height="13"
                 rx="3"
-                fill="#0e4429"
+                fill="#006d32"
                 style="animation-delay: 1.300s">
                 <title>
-                    2026-09-27: contribution level 1
+                    2026-09-27: contribution level 2
                 </title>
             </rect>
             
@@ -5172,10 +5172,10 @@
                 width="13"
                 height="13"
                 rx="3"
-                fill="#161b22"
+                fill="#006d32"
                 style="animation-delay: 1.320s">
                 <title>
-                    2026-09-28: contribution level 0
+                    2026-09-28: contribution level 2
                 </title>
             </rect>
             
@@ -5253,21 +5253,21 @@
             x="40"
             y="194"
             class="stat">
-            88 contributions
+            89 contributions
         </text>
 
         <text
             x="200"
             y="194"
             class="text">
-            Current streak: 80 days
+            Current streak: 81 days
         </text>
 
         <text
             x="370"
             y="194"
             class="text">
-            Longest streak: 80 days
+            Longest streak: 81 days
         </text>
 
         <text
