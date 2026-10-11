@@ -10,9 +10,12 @@
 
 </div>
 
-# Hi, I'm Yousuf
+<div align="center">
+
+![Header](https://capsule-render.vercel.app/api?type=waving&color=0:141E30,100:4B2C82&height=200&section=header&text=Hi%2C%20I'm%20Yousuf&fontSize=50&fontColor=fff&animation=fadeIn)
 
 **I'm learning how systems break, and trying to understand why.**
+</div>
 
 I’m studying Cybersecurity at RIT with a minor in Finance, and lately I’ve become increasingly interested in the space where technology, data, and money meet.
 
@@ -45,5 +48,10 @@ Most of the interesting things are hidden somewhere in that question.
 <br>
 
 <sub>Built with Python, SVG, GitHub Actions, and an unreasonable amount of curiosity.</sub>
+
+</div>
+<div align="center">
+
+![Footer](https://capsule-render.vercel.app/api?type=waving&color=0:141E30,100:4B2C82&height=100&section=footer)
 
 </div>
