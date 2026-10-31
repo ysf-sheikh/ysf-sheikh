@@ -17,26 +17,39 @@ OUTPUT_PATH = Path(__file__).resolve().parents[1] / "data" / "contributions.json
 COUNT_RE = re.compile(r"(\d[\d,]*)\s+contributions?", re.IGNORECASE)
 
 
-def parse_count(element) -> int:
-    """Read the actual contribution count from GitHub's accessible label/title."""
-    for attribute in ("aria-label", "title"):
-        value = element.get(attribute, "") or ""
-        match = COUNT_RE.search(value)
-        if match:
-            return int(match.group(1).replace(",", ""))
-        if "no contributions" in value.lower():
-            return 0
+def parse_count(page_text: str, day: date) -> int | None:
+    """
+    Find the contribution count for a calendar date in GitHub's accessible
+    page text. GitHub has moved the accessible label out of the day cell in
+    some page versions, so reading only the cell's attributes is unreliable.
+    """
+    month = day.strftime("%B")
+    day_number = day.day
 
-    # Some GitHub markup versions place the label on a child element.
-    for child in element.select("[aria-label], [title]"):
-        for attribute in ("aria-label", "title"):
-            value = child.get(attribute, "") or ""
-            match = COUNT_RE.search(value)
-            if match:
-                return int(match.group(1).replace(",", ""))
-            if "no contributions" in value.lower():
-                return 0
-    return 0
+    # GitHub labels use ordinal dates ("January 4th") in the contribution
+    # calendar. Accept an optional year as well, in case the markup changes.
+    ordinal = "th"
+    if day_number % 100 not in (11, 12, 13):
+        ordinal = {1: "st", 2: "nd", 3: "rd"}.get(day_number % 10, "th")
+
+    date_pattern = rf"{re.escape(month)}\\s+{day_number}(?:{ordinal})?(?:,?\\s*{day.year})?"
+    positive = re.search(
+        rf"(\\d[\\d,]*)\\s+contributions?\\s+on\\s+{date_pattern}",
+        page_text,
+        flags=re.IGNORECASE,
+    )
+    if positive:
+        return int(positive.group(1).replace(",", ""))
+
+    no_activity = re.search(
+        rf"no\\s+contributions\\s+on\\s+{date_pattern}",
+        page_text,
+        flags=re.IGNORECASE,
+    )
+    if no_activity:
+        return 0
+
+    return None
 
 
 def calculate_streaks(days: list[dict]) -> tuple[int, int]:
@@ -88,6 +101,19 @@ def main() -> None:
 
     soup = BeautifulSoup(response.text, "html.parser")
     cells = soup.select("[data-date][data-level]")
+    # GitHub's tooltip labels may be rendered outside the individual day
+    # elements. Read the complete accessible text once, then match each date.
+    page_text_parts = [soup.get_text(" ", strip=True)]
+    for node in soup.select("[aria-label], [title], tool-tip"):
+        page_text_parts.extend(
+            value for value in (
+                node.get("aria-label", ""),
+                node.get("title", ""),
+                node.get_text(" ", strip=True),
+            ) if value
+        )
+    page_text = " ".join(page_text_parts)
+
     if not cells:
         raise RuntimeError(
             "Could not find GitHub contribution cells. GitHub may have changed "
@@ -104,13 +130,13 @@ def main() -> None:
         except (TypeError, ValueError):
             continue
 
-        count = parse_count(cell)
-        if level > 0 and count == 0:
-            # Avoid silently generating a misleading skyline if GitHub's
-            # accessible count label is missing or its markup has changed.
+        count = parse_count(page_text, day)
+        if count is None:
+            # Do not invent an exact count from the 0-4 colour bucket. Fail
+            # clearly rather than publishing a skyline with fabricated heights.
             raise RuntimeError(
-                f"Contribution count could not be read for {raw_date}. "
-                "The existing contributions.json has been left untouched."
+                f"Could not find an accessible contribution label for "
+                f"{raw_date}. GitHub may have changed its calendar text."
             )
 
         days.append({
