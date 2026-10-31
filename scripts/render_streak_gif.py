@@ -1,5 +1,4 @@
 import json
-import math
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -21,6 +20,7 @@ HEIGHT = 340
 BACKGROUND = "#0d1117"
 PANEL = "#161b22"
 GRID_EMPTY = "#21262d"
+
 GRID_ACTIVE = [
     "#0e4429",
     "#006d32",
@@ -43,15 +43,15 @@ INTRO_FRAMES = 12
 FRAMES_PER_DAY = 2
 FINALE_FRAMES = 35
 
-# Limit the animation's frame count to keep the GIF manageable.
 MAX_ANIMATION_DAYS = 200
 
 
 # ============================================================
-# FONT HELPERS
+# FONTS
 # ============================================================
 
 def load_font(size, bold=False):
+
     candidates = []
 
     if bold:
@@ -66,6 +66,7 @@ def load_font(size, bold=False):
         ])
 
     for font_path in candidates:
+
         if Path(font_path).exists():
             return ImageFont.truetype(font_path, size)
 
@@ -73,45 +74,49 @@ def load_font(size, bold=False):
 
 
 FONT_TITLE = load_font(21, True)
-FONT_SUBTITLE = load_font(12)
-FONT_DAY = load_font(17, True)
 FONT_SMALL = load_font(10)
+FONT_DAY = load_font(17, True)
 FONT_COUNTER = load_font(43, True)
-FONT_LABEL = load_font(11, True)
+FONT_LABEL = load_font(11)
 
 
 # ============================================================
-# DATA
+# LOAD CONTRIBUTION DATA
 # ============================================================
 
 def load_data():
+
+    if not DATA_FILE.exists():
+        raise FileNotFoundError(
+            f"Contribution data not found: {DATA_FILE}"
+        )
+
     with open(DATA_FILE, "r", encoding="utf-8") as file:
         return json.load(file)
 
 
 def get_streak(data):
+
     days = {
-        item["date"]: int(item["level"])
+        date.fromisoformat(item["date"]): int(item["level"])
         for item in data["days"]
     }
 
     today = date.today()
 
-    if days.get(today.isoformat(), 0) == 0:
+    # If today has no contributions, check yesterday.
+    if days.get(today, 0) == 0:
         today -= timedelta(days=1)
 
     streak = []
+
     current = today
 
-    while True:
-        key = current.isoformat()
-
-        if days.get(key, 0) == 0:
-            break
+    while days.get(current, 0) > 0:
 
         streak.append({
             "date": current,
-            "level": days[key],
+            "level": days[current],
         })
 
         current -= timedelta(days=1)
@@ -126,24 +131,26 @@ def get_streak(data):
 # ============================================================
 
 def get_calendar_layout(days):
-    """
-    Arrange contribution days into a Sunday-first calendar.
-    Each column represents one week.
-    """
 
     first_date = min(days)
     last_date = max(days)
 
-    # Move backward to the Sunday starting the first week.
-    start = first_date - timedelta(days=(first_date.weekday() + 1) % 7)
+    # Sunday-first calendar.
+    start = first_date - timedelta(
+        days=(first_date.weekday() + 1) % 7
+    )
 
-    # Move forward to the Saturday ending the last week.
-    end = last_date + timedelta(days=(5 - last_date.weekday()) % 7 + 1)
+    # Complete the final calendar week.
+    end = last_date + timedelta(
+        days=(5 - last_date.weekday()) % 7 + 1
+    )
 
     cells = []
+
     current = start
 
     while current < end:
+
         column = (current - start).days // 7
         row = (current.weekday() + 1) % 7
 
@@ -151,7 +158,7 @@ def get_calendar_layout(days):
             "date": current,
             "column": column,
             "row": row,
-            "level": days.get(current.isoformat(), 0),
+            "level": days.get(current, 0),
         })
 
         current += timedelta(days=1)
@@ -163,38 +170,39 @@ def get_calendar_layout(days):
 # DRAWING HELPERS
 # ============================================================
 
-def rounded_rectangle(draw, box, radius, fill, outline=None, width=1):
+def rounded_rectangle(draw, box, radius, fill, outline=None):
+
     draw.rounded_rectangle(
         box,
         radius=radius,
         fill=fill,
         outline=outline,
-        width=width,
     )
 
 
-def centered_text(draw, center_x, y, text, font, fill):
-    box = draw.textbbox((0, 0), text, font=font)
-    text_width = box[2] - box[0]
+def draw_glow(image, x, y):
 
-    draw.text(
-        (center_x - text_width / 2, y),
-        text,
-        font=font,
-        fill=fill,
+    glow = Image.new(
+        "RGBA",
+        image.size,
+        (0, 0, 0, 0)
     )
 
-
-def draw_glow(image, x, y, radius=15):
-    glow = Image.new("RGBA", image.size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(glow)
 
     draw.ellipse(
-        (x - radius, y - radius, x + radius, y + radius),
+        (
+            x - 15,
+            y - 15,
+            x + 15,
+            y + 15,
+        ),
         fill=(57, 211, 83, 100),
     )
 
-    glow = glow.filter(ImageFilter.GaussianBlur(radius=8))
+    glow = glow.filter(
+        ImageFilter.GaussianBlur(radius=8)
+    )
 
     image.alpha_composite(glow)
 
@@ -211,6 +219,7 @@ def render_frame(
     missing_date,
     final=False,
 ):
+
     image = Image.new(
         "RGBA",
         (WIDTH, HEIGHT),
@@ -219,10 +228,7 @@ def render_frame(
 
     draw = ImageDraw.Draw(image)
 
-    # --------------------------------------------------------
     # HEADER
-    # --------------------------------------------------------
-
     draw.text(
         (42, 27),
         "CONTRIBUTION STREAK",
@@ -239,42 +245,31 @@ def render_frame(
 
     draw.text(
         (42, 79),
-        "ONE DAY AT A TIME  /  EVERY DAY COUNTS",
+        "ONE DAY AT A TIME / EVERY DAY COUNTS",
         font=FONT_SMALL,
         fill=TEXT_MUTED,
     )
 
-    # --------------------------------------------------------
     # CALENDAR PANEL
-    # --------------------------------------------------------
-
     rounded_rectangle(
         draw,
         (35, 110, 965, 294),
         12,
         PANEL,
-        outline="#30363d",
+        "#30363d",
     )
 
     calendar_x = 75
     calendar_y = 151
 
-    # Calculate calendar width and horizontal spacing.
-    max_column = max(cell["column"] for cell in calendar)
-
-    # --------------------------------------------------------
-    # CALENDAR CELLS
-    # --------------------------------------------------------
-
-    active_dates = {
-        item["date"]: item["level"]
-        for item in streak
-    }
-
-    completed = max(0, min(progress, len(streak)))
+    # Progress tracking.
+    completed = max(
+        0,
+        min(progress, len(streak))
+    )
 
     completed_dates = {
-        item["date"].isoformat(): item["level"]
+        item["date"]: item["level"]
         for item in streak[:completed]
     }
 
@@ -285,28 +280,35 @@ def render_frame(
     )
 
     current_date = (
-        current_item["date"].isoformat()
+        current_item["date"]
         if current_item
         else None
     )
 
-    # Background cells.
+    # CALENDAR CELLS
     for cell in calendar:
+
         x = calendar_x + cell["column"] * CELL_STEP
         y = calendar_y + cell["row"] * CELL_STEP
 
-        key = cell["date"].isoformat()
+        current = cell["date"]
 
         color = GRID_EMPTY
 
-        if key in completed_dates:
-            level = completed_dates[key]
-            color = GRID_ACTIVE[max(0, min(level - 1, 3))]
+        if current in completed_dates:
 
-        elif key == current_date:
+            level = completed_dates[current]
+
+            color = GRID_ACTIVE[
+                max(0, min(level - 1, 3))
+            ]
+
+        elif current == current_date:
+
             color = "#1c4428"
 
-        elif cell["date"] == missing_date:
+        elif current == missing_date:
+
             color = "#2d2225"
 
         rounded_rectangle(
@@ -321,10 +323,7 @@ def render_frame(
             color,
         )
 
-    # --------------------------------------------------------
     # MISSING DAY MARKER
-    # --------------------------------------------------------
-
     missing_cell = next(
         (
             cell for cell in calendar
@@ -334,6 +333,7 @@ def render_frame(
     )
 
     if missing_cell:
+
         x = calendar_x + missing_cell["column"] * CELL_STEP
         y = calendar_y + missing_cell["row"] * CELL_STEP
 
@@ -349,11 +349,9 @@ def render_frame(
             width=2,
         )
 
-    # --------------------------------------------------------
     # MOVING DOT
-    # --------------------------------------------------------
-
     if current_item and not final:
+
         current_cell = next(
             (
                 cell for cell in calendar
@@ -363,13 +361,18 @@ def render_frame(
         )
 
         if current_cell:
+
             x = calendar_x + current_cell["column"] * CELL_STEP
             y = calendar_y + current_cell["row"] * CELL_STEP
 
             center_x = x + CELL_SIZE // 2
             center_y = y + CELL_SIZE // 2
 
-            draw_glow(image, center_x, center_y)
+            draw_glow(
+                image,
+                center_x,
+                center_y,
+            )
 
             draw = ImageDraw.Draw(image)
 
@@ -385,10 +388,7 @@ def render_frame(
                 width=1,
             )
 
-    # --------------------------------------------------------
     # COUNTER
-    # --------------------------------------------------------
-
     counter_x = 730
 
     draw.text(
@@ -398,11 +398,9 @@ def render_frame(
         fill=TEXT_MUTED,
     )
 
-    day_number = completed
-
     draw.text(
         (counter_x, 164),
-        f"{day_number:03d}",
+        f"{completed:03d}",
         font=FONT_COUNTER,
         fill=ACCENT,
     )
@@ -428,22 +426,17 @@ def render_frame(
         fill=ACCENT if final else TEXT_MUTED,
     )
 
-    # --------------------------------------------------------
     # FOOTER
-    # --------------------------------------------------------
-
-    start_label = start_date.strftime("%b %d, %Y").upper()
-
     draw.text(
         (42, 311),
-        f"STARTED {start_label}",
+        f"STARTED {start_date.strftime('%b %d, %Y').upper()}",
         font=FONT_SMALL,
         fill=TEXT_MUTED,
     )
 
     draw.text(
         (WIDTH - 42, 311),
-        "AUREL / PERSONAL PROGRESS",
+        "PERSONAL PROGRESS",
         font=FONT_SMALL,
         fill=TEXT_MUTED,
         anchor="ra",
@@ -453,80 +446,76 @@ def render_frame(
 
 
 # ============================================================
-# ANIMATION
+# CREATE ANIMATION
 # ============================================================
 
 def create_animation():
+
     data = load_data()
 
     streak, days = get_streak(data)
 
     if not streak:
+
         raise ValueError(
             "No active contribution streak was found."
         )
 
     if len(streak) > MAX_ANIMATION_DAYS:
+
         streak = streak[-MAX_ANIMATION_DAYS:]
 
     calendar = get_calendar_layout(days)
 
     start_date = streak[0]["date"]
+
     missing_date = start_date - timedelta(days=1)
 
     frames = []
 
-    # --------------------------------------------------------
     # INTRO
-    # --------------------------------------------------------
-
     for _ in range(INTRO_FRAMES):
+
         frames.append(
             render_frame(
                 calendar,
                 streak,
-                progress=0,
-                start_date=start_date,
-                missing_date=missing_date,
+                0,
+                start_date,
+                missing_date,
             )
         )
 
-    # --------------------------------------------------------
     # DAY-BY-DAY PROGRESSION
-    # --------------------------------------------------------
-
     for day_index in range(len(streak)):
+
         for _ in range(FRAMES_PER_DAY):
+
             frames.append(
                 render_frame(
                     calendar,
                     streak,
-                    progress=day_index,
-                    start_date=start_date,
-                    missing_date=missing_date,
+                    day_index,
+                    start_date,
+                    missing_date,
                 )
             )
 
-    # --------------------------------------------------------
     # FINAL FRAME
-    # --------------------------------------------------------
-
     final_frame = render_frame(
         calendar,
         streak,
-        progress=len(streak),
-        start_date=start_date,
-        missing_date=missing_date,
+        len(streak),
+        start_date,
+        missing_date,
         final=True,
     )
 
     for _ in range(FINALE_FRAMES):
+
         frames.append(final_frame)
 
-    # --------------------------------------------------------
-    # EXPORT GIF
-    # --------------------------------------------------------
-
+    # EXPORT
     frames[0].save(
         OUTPUT_FILE,
         save_all=True,
@@ -537,10 +526,14 @@ def create_animation():
         disposal=2,
     )
 
-    print(f"Animation generated: {OUTPUT_FILE}")
+    print("--------------------------------")
+    print("STREAK ANIMATION GENERATED")
+    print("--------------------------------")
     print(f"Streak length: {len(streak)} days")
-    print(f"Streak started: {start_date}")
-    print(f"Frames generated: {len(frames)}")
+    print(f"Started: {start_date}")
+    print(f"Output: {OUTPUT_FILE}")
+    print(f"Frames: {len(frames)}")
+    print("--------------------------------")
 
 
 # ============================================================
@@ -548,4 +541,5 @@ def create_animation():
 # ============================================================
 
 if __name__ == "__main__":
+
     create_animation()
