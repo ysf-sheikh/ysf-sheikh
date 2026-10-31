@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 jobs:
-  heatmap:
+  contribution-city:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,18 +28,19 @@ jobs:
 
       - name: Install dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install -r scripts/requirements.txt
 
       - name: Fetch contribution data
         run: |
           python scripts/fetch_contributions.py
 
-      - name: Render contribution heatmap
+      - name: Render animated contribution city
         run: |
-          python scripts/render_heatmap_svg.py
+          python scripts/render_city_gif.py
 
       - name: Commit updated files
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: refresh contribution graph [skip ci]"
-          file_pattern: "data/contributions.json contrib-heatmap.svg"
+          commit_message: "chore: refresh contribution city [skip ci]"
+          file_pattern: "data/contributions.json contribution-city.gif"
