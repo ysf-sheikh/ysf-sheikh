@@ -4,7 +4,6 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
-
 # ============================================================
 # CONFIGURATION
 # ============================================================
@@ -15,114 +14,102 @@ DATA_FILE = ROOT / "data" / "contributions.json"
 OUTPUT_FILE = ROOT / "contrib-streak.gif"
 
 WIDTH = 1000
-HEIGHT = 340
+HEIGHT = 380
 
-BACKGROUND = "#0d1117"
-PANEL = "#161b22"
-GRID_EMPTY = "#21262d"
+# Target aesthetic color palette
+BACKGROUND = "#ffffff"
+TEXT_PRIMARY = "#111111"
+TEXT_MUTED = "#666666"
+RED = "#d1242f"
+
+GRID_EMPTY = "#ebedf0"
+GRID_FADED = "#f4f5f6"
 
 GRID_ACTIVE = [
-    "#0e4429",
-    "#006d32",
-    "#26a641",
-    "#39d353",
+    "#9be9a8",
+    "#40c463",
+    "#30a14e",
+    "#216e39",
 ]
-
-TEXT_PRIMARY = "#e6edf3"
-TEXT_MUTED = "#8b949e"
-ACCENT = "#39d353"
-ACCENT_GLOW = "#69f0a0"
-RED = "#f85149"
 
 CELL_SIZE = 13
 CELL_GAP = 4
 CELL_STEP = CELL_SIZE + CELL_GAP
 
-FPS_DELAY = 65
-INTRO_FRAMES = 12
-FRAMES_PER_DAY = 2
-FINALE_FRAMES = 35
-
-MAX_ANIMATION_DAYS = 200
+FPS_DELAY = 50
+INTRO_FRAMES = 10
+FRAMES_PER_DAY = 1
+FINALE_FRAMES = 40
 
 
 # ============================================================
 # FONTS
 # ============================================================
 
-def load_font(size, bold=False):
-
+def load_font(size, bold=False, serif=False):
     candidates = []
-
-    if bold:
+    if serif:
         candidates.extend([
-            "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-            "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf",
+            "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf" if bold else "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf",
+            "/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf" if bold else "/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf",
         ])
     else:
-        candidates.extend([
-            "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
-            "/usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf",
-        ])
+        if bold:
+            candidates.extend([
+                "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+                "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf",
+            ])
+        else:
+            candidates.extend([
+                "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+                "/usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf",
+            ])
 
     for font_path in candidates:
-
         if Path(font_path).exists():
             return ImageFont.truetype(font_path, size)
 
     return ImageFont.load_default()
 
 
-FONT_TITLE = load_font(21, True)
-FONT_SMALL = load_font(10)
-FONT_DAY = load_font(17, True)
-FONT_COUNTER = load_font(43, True)
-FONT_LABEL = load_font(11)
+FONT_HUGE = load_font(56, bold=True, serif=True)
+FONT_SUB = load_font(10)
+FONT_RED_LABEL = load_font(10, bold=True)
+FONT_SMALL = load_font(9)
 
 
 # ============================================================
-# LOAD CONTRIBUTION DATA
+# LOAD CONTRIBUTION DATA & STREAK LOGIC
 # ============================================================
 
 def load_data():
-
     if not DATA_FILE.exists():
-        raise FileNotFoundError(
-            f"Contribution data not found: {DATA_FILE}"
-        )
-
+        raise FileNotFoundError(f"Contribution data not found: {DATA_FILE}")
     with open(DATA_FILE, "r", encoding="utf-8") as file:
         return json.load(file)
 
 
 def get_streak(data):
-
     days = {
         date.fromisoformat(item["date"]): int(item["level"])
         for item in data["days"]
     }
 
     today = date.today()
-
-    # If today has no contributions, check yesterday.
     if days.get(today, 0) == 0:
         today -= timedelta(days=1)
 
+    # Walk back until zero contributions
     streak = []
-
     current = today
-
     while days.get(current, 0) > 0:
-
         streak.append({
             "date": current,
             "level": days[current],
         })
-
         current -= timedelta(days=1)
 
     streak.reverse()
-
     return streak, days
 
 
@@ -130,81 +117,24 @@ def get_streak(data):
 # CALENDAR LAYOUT
 # ============================================================
 
-def get_calendar_layout(days):
-
-    first_date = min(days)
-    last_date = max(days)
-
-    # Sunday-first calendar.
-    start = first_date - timedelta(
-        days=(first_date.weekday() + 1) % 7
-    )
-
-    # Complete the final calendar week.
-    end = last_date + timedelta(
-        days=(5 - last_date.weekday()) % 7 + 1
-    )
+def get_calendar_layout(streak_start, last_date):
+    # Sunday-first alignment spanning from before the streak start to current date
+    start = streak_start - timedelta(days=(streak_start.weekday() + 1) % 7)
+    end = last_date + timedelta(days=(5 - last_date.weekday()) % 7 + 1)
 
     cells = []
-
     current = start
-
-    while current < end:
-
+    while current <= end:
         column = (current - start).days // 7
         row = (current.weekday() + 1) % 7
-
         cells.append({
             "date": current,
             "column": column,
             "row": row,
-            "level": days.get(current, 0),
         })
-
         current += timedelta(days=1)
 
     return cells
-
-
-# ============================================================
-# DRAWING HELPERS
-# ============================================================
-
-def rounded_rectangle(draw, box, radius, fill, outline=None):
-
-    draw.rounded_rectangle(
-        box,
-        radius=radius,
-        fill=fill,
-        outline=outline,
-    )
-
-
-def draw_glow(image, x, y):
-
-    glow = Image.new(
-        "RGBA",
-        image.size,
-        (0, 0, 0, 0)
-    )
-
-    draw = ImageDraw.Draw(glow)
-
-    draw.ellipse(
-        (
-            x - 15,
-            y - 15,
-            x + 15,
-            y + 15,
-        ),
-        fill=(57, 211, 83, 100),
-    )
-
-    glow = glow.filter(
-        ImageFilter.GaussianBlur(radius=8)
-    )
-
-    image.alpha_composite(glow)
 
 
 # ============================================================
@@ -214,233 +144,113 @@ def draw_glow(image, x, y):
 def render_frame(
     calendar,
     streak,
+    days_map,
     progress,
     start_date,
-    missing_date,
+    last_day_off,
     final=False,
 ):
-
-    image = Image.new(
-        "RGBA",
-        (WIDTH, HEIGHT),
-        BACKGROUND,
-    )
-
+    image = Image.new("RGBA", (WIDTH, HEIGHT), BACKGROUND)
     draw = ImageDraw.Draw(image)
 
-    # HEADER
-    draw.text(
-        (42, 27),
-        "CONTRIBUTION STREAK",
-        font=FONT_LABEL,
-        fill=ACCENT,
-    )
+    current_day_count = max(0, min(progress, len(streak)))
 
+    # HEADER - Editorial Style matching target image
     draw.text(
-        (42, 48),
-        "Consistency compounds.",
-        font=FONT_TITLE,
+        (40, 25),
+        f"Day {current_day_count}",
+        font=FONT_HUGE,
         fill=TEXT_PRIMARY,
     )
 
     draw.text(
-        (42, 79),
-        "ONE DAY AT A TIME / EVERY DAY COUNTS",
-        font=FONT_SMALL,
+        (40, 92),
+        f"SINCE {start_date.strftime('%d %b %Y').upper()}",
+        font=FONT_SUB,
         fill=TEXT_MUTED,
     )
 
-    # CALENDAR PANEL
-    rounded_rectangle(
-        draw,
-        (35, 110, 965, 294),
-        12,
-        PANEL,
-        "#30363d",
-    )
+    if last_day_off:
+        draw.text(
+            (WIDTH - 40, 92),
+            f"LAST DAY OFF: {last_day_off.strftime('%d %b %Y').upper()}",
+            font=FONT_RED_LABEL,
+            fill=RED,
+            anchor="ra",
+        )
 
-    calendar_x = 75
-    calendar_y = 151
+    calendar_x = 40
+    calendar_y = 150
 
-    # Progress tracking.
-    completed = max(
-        0,
-        min(progress, len(streak))
-    )
+    completed_streak_dates = {item["date"] for item in streak[:current_day_count]}
+    active_streak_dates = {item["date"] for item in streak}
 
-    completed_dates = {
-        item["date"]: item["level"]
-        for item in streak[:completed]
-    }
+    # Track path for the trail effect
+    active_trail = [item["date"] for item in streak[max(0, current_day_count - 4):current_day_count]]
 
-    current_item = (
-        streak[completed]
-        if completed < len(streak)
-        else None
-    )
-
-    current_date = (
-        current_item["date"]
-        if current_item
-        else None
-    )
-
-    # CALENDAR CELLS
+    # DRAW CELLS
     for cell in calendar:
-
         x = calendar_x + cell["column"] * CELL_STEP
         y = calendar_y + cell["row"] * CELL_STEP
-
-        current = cell["date"]
+        current_date = cell["date"]
 
         color = GRID_EMPTY
+        level = days_map.get(current_date, 0)
 
-        if current in completed_dates:
+        if current_date in active_streak_dates:
+            if current_date in completed_streak_dates:
+                color = GRID_ACTIVE[min(max(0, level - 1), 3)]
+            else:
+                # Future unreached streak days fade back
+                color = GRID_FADED
+        else:
+            # Everything before/outside the streak fades back significantly
+            color = GRID_FADED
 
-            level = completed_dates[current]
-
-            color = GRID_ACTIVE[
-                max(0, min(level - 1, 3))
-            ]
-
-        elif current == current_date:
-
-            color = "#1c4428"
-
-        elif current == missing_date:
-
-            color = "#2d2225"
-
-        rounded_rectangle(
-            draw,
-            (
-                x,
-                y,
-                x + CELL_SIZE,
-                y + CELL_SIZE,
-            ),
-            3,
-            color,
+        # Draw rounded cell rectangle
+        draw.rounded_rectangle(
+            (x, y, x + CELL_SIZE, y + CELL_SIZE),
+            radius=3,
+            fill=color,
         )
 
-    # MISSING DAY MARKER
-    missing_cell = next(
-        (
-            cell for cell in calendar
-            if cell["date"] == missing_date
-        ),
-        None,
-    )
-
-    if missing_cell:
-
-        x = calendar_x + missing_cell["column"] * CELL_STEP
-        y = calendar_y + missing_cell["row"] * CELL_STEP
-
-        draw.line(
-            (x + 3, y + 3, x + 10, y + 10),
-            fill=RED,
-            width=2,
-        )
-
-        draw.line(
-            (x + 10, y + 3, x + 3, y + 10),
-            fill=RED,
-            width=2,
-        )
-
-    # MOVING DOT
-    if current_item and not final:
-
-        current_cell = next(
-            (
-                cell for cell in calendar
-                if cell["date"] == current_item["date"]
-            ),
-            None,
-        )
-
-        if current_cell:
-
-            x = calendar_x + current_cell["column"] * CELL_STEP
-            y = calendar_y + current_cell["row"] * CELL_STEP
-
-            center_x = x + CELL_SIZE // 2
-            center_y = y + CELL_SIZE // 2
-
-            draw_glow(
-                image,
-                center_x,
-                center_y,
+        # Draw trailing highlight glow/outline for recent steps
+        if current_date in active_trail and not final:
+            draw.rounded_rectangle(
+                (x, y, x + CELL_SIZE, y + CELL_SIZE),
+                radius=3,
+                outline="#216e39",
+                width=2,
             )
 
-            draw = ImageDraw.Draw(image)
+    # LAST DAY OFF RED CROSS MARKER
+    if last_day_off:
+        cross_cell = next((c for c in calendar if c["date"] == last_day_off), None)
+        if cross_cell:
+            cx = calendar_x + cross_cell["column"] * CELL_STEP
+            cy = calendar_y + cross_cell["row"] * CELL_STEP
+            
+            draw.text(
+                (cx + 2, cy - 2),
+                "×",
+                font=load_font(14, bold=True),
+                fill=RED,
+            )
 
+    # DRAW RUNNING DOT ON CURRENT STEP
+    if 0 < current_day_count <= len(streak) and not final:
+        current_item = streak[current_day_count - 1]
+        target_cell = next((c for c in calendar if c["date"] == current_item["date"]), None)
+        if target_cell:
+            tx = calendar_x + target_cell["column"] * CELL_STEP + CELL_SIZE // 2
+            ty = calendar_y + target_cell["row"] * CELL_STEP + CELL_SIZE // 2
+            
             draw.ellipse(
-                (
-                    center_x - 5,
-                    center_y - 5,
-                    center_x + 5,
-                    center_y + 5,
-                ),
-                fill=ACCENT_GLOW,
+                (tx - 5, ty - 5, tx + 5, ty + 5),
+                fill="#30a14e",
                 outline="#ffffff",
                 width=1,
             )
-
-    # COUNTER
-    counter_x = 730
-
-    draw.text(
-        (counter_x, 145),
-        "CURRENT STREAK",
-        font=FONT_LABEL,
-        fill=TEXT_MUTED,
-    )
-
-    draw.text(
-        (counter_x, 164),
-        f"{completed:03d}",
-        font=FONT_COUNTER,
-        fill=ACCENT,
-    )
-
-    draw.text(
-        (counter_x + 105, 189),
-        "DAYS",
-        font=FONT_LABEL,
-        fill=TEXT_PRIMARY,
-    )
-
-    if final:
-        status = "STREAK COMPLETE"
-    elif completed == 0:
-        status = "READY TO BEGIN"
-    else:
-        status = "KEEP GOING"
-
-    draw.text(
-        (counter_x, 224),
-        status,
-        font=FONT_SMALL,
-        fill=ACCENT if final else TEXT_MUTED,
-    )
-
-    # FOOTER
-    draw.text(
-        (42, 311),
-        f"STARTED {start_date.strftime('%b %d, %Y').upper()}",
-        font=FONT_SMALL,
-        fill=TEXT_MUTED,
-    )
-
-    draw.text(
-        (WIDTH - 42, 311),
-        "PERSONAL PROGRESS",
-        font=FONT_SMALL,
-        fill=TEXT_MUTED,
-        anchor="ra",
-    )
 
     return image.convert("RGB")
 
@@ -450,72 +260,44 @@ def render_frame(
 # ============================================================
 
 def create_animation():
-
     data = load_data()
-
-    streak, days = get_streak(data)
+    streak, days_map = get_streak(data)
 
     if not streak:
-
-        raise ValueError(
-            "No active contribution streak was found."
-        )
-
-    if len(streak) > MAX_ANIMATION_DAYS:
-
-        streak = streak[-MAX_ANIMATION_DAYS:]
-
-    calendar = get_calendar_layout(days)
+        raise ValueError("No active contribution streak was found.")
 
     start_date = streak[0]["date"]
+    last_date = max(days_map.keys())
+    last_day_off = start_date - timedelta(days=1)
 
-    missing_date = start_date - timedelta(days=1)
-
+    calendar = get_calendar_layout(start_date, last_date)
     frames = []
 
     # INTRO
     for _ in range(INTRO_FRAMES):
-
         frames.append(
             render_frame(
-                calendar,
-                streak,
-                0,
-                start_date,
-                missing_date,
+                calendar, streak, days_map, 0, start_date, last_day_off
             )
         )
 
     # DAY-BY-DAY PROGRESSION
-    for day_index in range(len(streak)):
-
+    for day_index in range(1, len(streak) + 1):
         for _ in range(FRAMES_PER_DAY):
-
             frames.append(
                 render_frame(
-                    calendar,
-                    streak,
-                    day_index,
-                    start_date,
-                    missing_date,
+                    calendar, streak, days_map, day_index, start_date, last_day_off
                 )
             )
 
-    # FINAL FRAME
+    # FINALE FRAMES
     final_frame = render_frame(
-        calendar,
-        streak,
-        len(streak),
-        start_date,
-        missing_date,
-        final=True,
+        calendar, streak, days_map, len(streak), start_date, last_day_off, final=True
     )
-
     for _ in range(FINALE_FRAMES):
-
         frames.append(final_frame)
 
-    # EXPORT
+    # EXPORT GIF
     frames[0].save(
         OUTPUT_FILE,
         save_all=True,
@@ -536,10 +318,5 @@ def create_animation():
     print("--------------------------------")
 
 
-# ============================================================
-# MAIN
-# ============================================================
-
 if __name__ == "__main__":
-
     create_animation()
