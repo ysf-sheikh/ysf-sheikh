@@ -2,7 +2,7 @@
 
 <h3><code>yousuf@github ~ $ ./contributions.sh</code></h3>
 
-<img src="./contrib-heatmap.svg" width="860" />
+<img src="./contribution-city.gif" width="860" alt="Animated isometric city generated from my GitHub contribution activity" />
 
 <br><br>
 
@@ -47,7 +47,7 @@ Most of the interesting things are hidden somewhere in that question.
 
 <br>
 
-<sub>Built with Python, SVG, GitHub Actions, and an unreasonable amount of curiosity.</sub>
+<sub>Built with Python, Pillow, GitHub Actions, and an unreasonable amount of curiosity.</sub>
 
 </div>
 <div align="center">
