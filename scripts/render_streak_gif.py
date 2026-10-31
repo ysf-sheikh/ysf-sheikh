@@ -1,8 +1,7 @@
 import json
 from datetime import date, timedelta
 from pathlib import Path
-
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageDraw, ImageFont
 
 # ============================================================
 # CONFIGURATION
@@ -16,7 +15,7 @@ OUTPUT_FILE = ROOT / "contrib-streak.gif"
 WIDTH = 1000
 HEIGHT = 380
 
-# Target aesthetic color palette
+# Clean aesthetic theme matching target
 BACKGROUND = "#ffffff"
 TEXT_PRIMARY = "#111111"
 TEXT_MUTED = "#666666"
@@ -75,11 +74,10 @@ def load_font(size, bold=False, serif=False):
 FONT_HUGE = load_font(56, bold=True, serif=True)
 FONT_SUB = load_font(10)
 FONT_RED_LABEL = load_font(10, bold=True)
-FONT_SMALL = load_font(9)
 
 
 # ============================================================
-# LOAD CONTRIBUTION DATA & STREAK LOGIC
+# LOAD DATA & STREAK LOGIC
 # ============================================================
 
 def load_data():
@@ -99,7 +97,6 @@ def get_streak(data):
     if days.get(today, 0) == 0:
         today -= timedelta(days=1)
 
-    # Walk back until zero contributions
     streak = []
     current = today
     while days.get(current, 0) > 0:
@@ -118,7 +115,6 @@ def get_streak(data):
 # ============================================================
 
 def get_calendar_layout(streak_start, last_date):
-    # Sunday-first alignment spanning from before the streak start to current date
     start = streak_start - timedelta(days=(streak_start.weekday() + 1) % 7)
     end = last_date + timedelta(days=(5 - last_date.weekday()) % 7 + 1)
 
@@ -155,7 +151,7 @@ def render_frame(
 
     current_day_count = max(0, min(progress, len(streak)))
 
-    # HEADER - Editorial Style matching target image
+    # HEADER: Day Counter
     draw.text(
         (40, 25),
         f"Day {current_day_count}",
@@ -184,9 +180,7 @@ def render_frame(
 
     completed_streak_dates = {item["date"] for item in streak[:current_day_count]}
     active_streak_dates = {item["date"] for item in streak}
-
-    # Track path for the trail effect
-    active_trail = [item["date"] for item in streak[max(0, current_day_count - 4):current_day_count]]
+    cell_lookup = {c["date"]: c for c in calendar}
 
     # DRAW CELLS
     for cell in calendar:
@@ -201,35 +195,22 @@ def render_frame(
             if current_date in completed_streak_dates:
                 color = GRID_ACTIVE[min(max(0, level - 1), 3)]
             else:
-                # Future unreached streak days fade back
                 color = GRID_FADED
         else:
-            # Everything before/outside the streak fades back significantly
             color = GRID_FADED
 
-        # Draw rounded cell rectangle
         draw.rounded_rectangle(
             (x, y, x + CELL_SIZE, y + CELL_SIZE),
             radius=3,
             fill=color,
         )
 
-        # Draw trailing highlight glow/outline for recent steps
-        if current_date in active_trail and not final:
-            draw.rounded_rectangle(
-                (x, y, x + CELL_SIZE, y + CELL_SIZE),
-                radius=3,
-                outline="#216e39",
-                width=2,
-            )
-
-    # LAST DAY OFF RED CROSS MARKER
+    # LAST DAY OFF RED CROSS
     if last_day_off:
-        cross_cell = next((c for c in calendar if c["date"] == last_day_off), None)
+        cross_cell = cell_lookup.get(last_day_off)
         if cross_cell:
             cx = calendar_x + cross_cell["column"] * CELL_STEP
             cy = calendar_y + cross_cell["row"] * CELL_STEP
-            
             draw.text(
                 (cx + 2, cy - 2),
                 "×",
@@ -237,16 +218,26 @@ def render_frame(
                 fill=RED,
             )
 
-    # DRAW RUNNING DOT ON CURRENT STEP
-    if 0 < current_day_count <= len(streak) and not final:
-        current_item = streak[current_day_count - 1]
-        target_cell = next((c for c in calendar if c["date"] == current_item["date"]), None)
-        if target_cell:
-            tx = calendar_x + target_cell["column"] * CELL_STEP + CELL_SIZE // 2
-            ty = calendar_y + target_cell["row"] * CELL_STEP + CELL_SIZE // 2
-            
+    # CONNECTING LINE THROUGH STREAK DAYS IN CHRONOLOGICAL ORDER + LEADING DOT
+    if current_day_count > 0:
+        points = []
+        for i in range(current_day_count):
+            item = streak[i]
+            c = cell_lookup.get(item["date"])
+            if c:
+                px = calendar_x + c["column"] * CELL_STEP + CELL_SIZE // 2
+                py = calendar_y + c["row"] * CELL_STEP + CELL_SIZE // 2
+                points.append((px, py))
+
+        # Draw connecting line through all passed days
+        if len(points) >= 2:
+            draw.line(points, fill="#555555", width=2)
+
+        # Draw leading dot at the current day tip
+        if points and not final:
+            last_pt = points[-1]
             draw.ellipse(
-                (tx - 5, ty - 5, tx + 5, ty + 5),
+                (last_pt[0] - 5, last_pt[1] - 5, last_pt[0] + 5, last_pt[1] + 5),
                 fill="#30a14e",
                 outline="#ffffff",
                 width=1,
@@ -264,7 +255,7 @@ def create_animation():
     streak, days_map = get_streak(data)
 
     if not streak:
-        raise ValueError("No active contribution streak was found.")
+        raise ValueError("No active contribution streak found.")
 
     start_date = streak[0]["date"]
     last_date = max(days_map.keys())
@@ -273,31 +264,17 @@ def create_animation():
     calendar = get_calendar_layout(start_date, last_date)
     frames = []
 
-    # INTRO
     for _ in range(INTRO_FRAMES):
-        frames.append(
-            render_frame(
-                calendar, streak, days_map, 0, start_date, last_day_off
-            )
-        )
+        frames.append(render_frame(calendar, streak, days_map, 0, start_date, last_day_off))
 
-    # DAY-BY-DAY PROGRESSION
     for day_index in range(1, len(streak) + 1):
         for _ in range(FRAMES_PER_DAY):
-            frames.append(
-                render_frame(
-                    calendar, streak, days_map, day_index, start_date, last_day_off
-                )
-            )
+            frames.append(render_frame(calendar, streak, days_map, day_index, start_date, last_day_off))
 
-    # FINALE FRAMES
-    final_frame = render_frame(
-        calendar, streak, days_map, len(streak), start_date, last_day_off, final=True
-    )
+    final_frame = render_frame(calendar, streak, days_map, len(streak), start_date, last_day_off, final=True)
     for _ in range(FINALE_FRAMES):
         frames.append(final_frame)
 
-    # EXPORT GIF
     frames[0].save(
         OUTPUT_FILE,
         save_all=True,
