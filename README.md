@@ -4,10 +4,6 @@
 
 <img src="./contrib-heatmap.svg" width="860" />
 
-<br>
-
-<img src="./contrib-streak.gif" width="860" />
-
 <br><br>
 
 <h3><code>yousuf@github ~ $ whoami</code></h3>
