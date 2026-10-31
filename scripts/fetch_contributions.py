@@ -32,9 +32,9 @@ def parse_count(page_text: str, day: date) -> int | None:
     if day_number % 100 not in (11, 12, 13):
         ordinal = {1: "st", 2: "nd", 3: "rd"}.get(day_number % 10, "th")
 
-    date_pattern = rf"{re.escape(month)}\\s+{day_number}(?:{ordinal})?(?:,?\\s*{day.year})?"
+    date_pattern = rf"{re.escape(month)}\s+{day_number}(?:{ordinal})?(?:,?\s*{day.year})?"
     positive = re.search(
-        rf"(\\d[\\d,]*)\\s+contributions?\\s+on\\s+{date_pattern}",
+        rf"(\d[\d,]*)\s+contributions?\s+on\s+{date_pattern}",
         page_text,
         flags=re.IGNORECASE,
     )
@@ -42,7 +42,7 @@ def parse_count(page_text: str, day: date) -> int | None:
         return int(positive.group(1).replace(",", ""))
 
     no_activity = re.search(
-        rf"no\\s+contributions\\s+on\\s+{date_pattern}",
+        rf"no\s+contributions\s+on\s+{date_pattern}",
         page_text,
         flags=re.IGNORECASE,
     )
