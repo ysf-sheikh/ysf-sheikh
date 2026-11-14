@@ -2890,10 +2890,10 @@
                 width="13"
                 height="13"
                 rx="3"
-                fill="#26a641"
+                fill="#006d32"
                 style="animation-delay: 0.820s">
                 <title>
-                    2026-05-30: contribution level 3
+                    2026-05-30: contribution level 2
                 </title>
             </rect>
             
@@ -4556,10 +4556,10 @@
                 width="13"
                 height="13"
                 rx="3"
-                fill="#26a641"
+                fill="#006d32"
                 style="animation-delay: 1.245s">
                 <title>
-                    2026-09-26: contribution level 3
+                    2026-09-26: contribution level 2
                 </title>
             </rect>
             
@@ -4626,10 +4626,10 @@
                 width="13"
                 height="13"
                 rx="3"
-                fill="#006d32"
+                fill="#0e4429"
                 style="animation-delay: 1.230s">
                 <title>
-                    2026-10-01: contribution level 2
+                    2026-10-01: contribution level 1
                 </title>
             </rect>
             
@@ -4766,10 +4766,10 @@
                 width="13"
                 height="13"
                 rx="3"
-                fill="#39d353"
+                fill="#26a641"
                 style="animation-delay: 1.200s">
                 <title>
-                    2026-10-11: contribution level 4
+                    2026-10-11: contribution level 3
                 </title>
             </rect>
             
@@ -5060,10 +5060,10 @@
                 width="13"
                 height="13"
                 rx="3"
-                fill="#39d353"
+                fill="#26a641"
                 style="animation-delay: 1.275s">
                 <title>
-                    2026-11-01: contribution level 4
+                    2026-11-01: contribution level 3
                 </title>
             </rect>
             
@@ -5088,10 +5088,10 @@
                 width="13"
                 height="13"
                 rx="3"
-                fill="#006d32"
+                fill="#0e4429"
                 style="animation-delay: 1.315s">
                 <title>
-                    2026-11-03: contribution level 2
+                    2026-11-03: contribution level 1
                 </title>
             </rect>
             
@@ -5214,10 +5214,10 @@
                 width="13"
                 height="13"
                 rx="3"
-                fill="#39d353"
+                fill="#26a641"
                 style="animation-delay: 1.380s">
                 <title>
-                    2026-11-12: contribution level 4
+                    2026-11-12: contribution level 3
                 </title>
             </rect>
             
@@ -5228,10 +5228,10 @@
                 width="13"
                 height="13"
                 rx="3"
-                fill="#161b22"
+                fill="#39d353"
                 style="animation-delay: 1.400s">
                 <title>
-                    2026-11-13: contribution level 0
+                    2026-11-13: contribution level 4
                 </title>
             </rect>
             
@@ -5253,21 +5253,21 @@
             x="40"
             y="194"
             class="stat">
-            134 contributions
+            135 contributions
         </text>
 
         <text
             x="200"
             y="194"
             class="text">
-            Current streak: 126 days
+            Current streak: 127 days
         </text>
 
         <text
             x="370"
             y="194"
             class="text">
-            Longest streak: 126 days
+            Longest streak: 127 days
         </text>
 
         <text
